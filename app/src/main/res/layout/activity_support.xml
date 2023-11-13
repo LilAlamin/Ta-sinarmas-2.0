@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FBF0F0"
+    tools:context=".SupportActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/myPict"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/pp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/myPict"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="30dp"
+        app:cardBackgroundColor="#fff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+
+            <TextView
+                android:id="@+id/profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/myPict"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="8dp"
+                android:layout_gravity="center"
+                android:text="Ronald Ramadhani Pangestu"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/profile_description"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile_name"
+                android:text="Saya adalah seorang penggemar teknologi yang sangat antusias terhadap dunia pengembangan aplikasi.saya telah menggali dan mempelajari berbagai teknologi dan platform, mulai dari Android Studio hingga SDK Flutter..."
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:textColor="@color/black"
+                android:lineSpacingExtra="4dp" />
+
+            <TextView
+                android:id="@+id/read_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_below="@id/profile_description"
+                android:text="Baca Penuh"
+                android:layout_gravity="center"
+                android:layout_centerHorizontal="true"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="14sp" />
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile_description"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/gif_image_view"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:scaleType="fitCenter" />
+
+                <TextView
+                    android:id="@+id/support_me_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp"
+                    android:text="Support Me"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/payment_options"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/support_me_text"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="8dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/gopay_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gopay"
+                    android:layout_marginEnd="10dp"
+                    android:drawablePadding="16dp"
+                    android:backgroundTint="#4CAF50"
+                    android:paddingVertical="16dp"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/dana_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="16dp"
+                    android:backgroundTint="#03A9F4"
+                    android:paddingVertical="16dp"
+                    android:text="Dana"
+                    android:textColor="#FFFFFF" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
